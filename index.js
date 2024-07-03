@@ -60,6 +60,10 @@ function addBlock(count) {
     const block = document.createElement("div");
     block.classList.add("block");
     container.appendChild(block);
+        //удаляет цвета уже по новой созданных блоков
+    removeColors.addEventListener("click", () => {
+      block.style.backgroundColor = "#fff";
+    })
     //создаеь рандомные цвета при ховере
     block.addEventListener("mouseover", () => {
       const randomIndex = Math.floor(Math.random() * colors.length)
